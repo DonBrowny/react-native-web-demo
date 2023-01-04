@@ -1,7 +1,8 @@
 import * as React from 'react'
 import Head from 'next/head'
+import { AppProps } from 'next/app'
 
-function MyApp({ Component, pageProps }) {
+export default function App({ Component, pageProps } : AppProps) {
   return (
     <>
       <Head>
@@ -11,5 +12,3 @@ function MyApp({ Component, pageProps }) {
     </>
   )
 }
-
-export default MyApp

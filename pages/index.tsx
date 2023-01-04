@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -20,16 +21,17 @@ const styles = StyleSheet.create({
   },
 })
 
-export default function App(props) {
+export default function IndexPage() {
   return (
     <View style={styles.container}>
       <Text accessibilityRole="header" style={styles.text}>
         React Native for Web & Next.js
       </Text>
-
-      <Text style={styles.link} accessibilityRole="link" href={`/alternate`}>
+      <Link href='/alternate'>
+      <Text style={styles.link} accessibilityRole="link">
         A universal link
       </Text>
+      </Link>
 
       <View style={styles.textContainer}>
         <Text accessibilityRole="header" aria-level="2" style={styles.text}>

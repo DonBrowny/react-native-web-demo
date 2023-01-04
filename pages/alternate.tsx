@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { StyleSheet, Text, View } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -22,10 +23,11 @@ export default function Alternate() {
       <Text accessibilityRole="header" style={styles.text}>
         Alternate Page
       </Text>
-
-      <Text style={styles.link} accessibilityRole="link" href={`/`}>
+      <Link href='/'>
+      <Text style={styles.link} accessibilityRole="link">
         Go Back
       </Text>
+      </Link>
     </View>
   )
 }
